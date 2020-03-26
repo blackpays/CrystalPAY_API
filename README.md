@@ -96,7 +96,9 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 ```json
 {"error":false,"auth":"ok"}
 ```
+
 &nbsp;
+
 `PHP` Пример генерации секретного ключа для вывода:
 
 ```php

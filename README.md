@@ -54,7 +54,7 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 
 | Параметр |     Описание     |
 |:--------:|------------------|
-|     o    | Операция (generate) |
+|     o    | Операция (checkpay) |
 |     n    | Имя/Логин кассы  |
 |     s    | Секретный ключ 1 |
 |  i       | ID Чека (Операции)    |
@@ -78,19 +78,32 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 
 | Параметр |     Описание     |
 |:--------:|------------------|
-|     o    | Операция (generate) |
+|     o    | Операция (withdraw) |
 |     n    | Имя/Логин кассы  |
 |     s    | Секретный ключ 1 |
+|  secret  | Секретный ключ для вывода средств    |
 |  amount  | Сумма в рубля    |
+|  wallet  | Номер кошелька    |
+|  service  | Сервис для вывода (Список доступен в боте)    |
 
 `GET` Пример запроса:
 
 ```sh
-https://api.crystalpay.ru/api.phps=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=generate&amount=100
+https://api.crystalpay.ru/api.phps=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=withdraw&wallet=79999999999999&amount=100&service=qw&secret=%СЕКРЕТНЫЙ_КЛЮЧ%
 ```
 
 `JSON` Ответ:
 ```json
-{"id":"1_gdTSSewzsE","url":"https:\/\/pay.crystalpay.ru\/?i=1_gdTSSewzsE","error":false,"auth":"ok"}
+{"error":false,"auth":"ok"}
+```
+
+`PHP` Пример генерации секретного ключа для вывода:
+
+```php
+$wallet = "79999999999999";
+$amount = "100";
+$secret2 = "7551ffeba39ddbf705d238c97ed9d26986f4c0f9"; //Секретный ключ 2
+
+$withdraw_secret = md5($wallet.'-'.$amount.'-'.$secret2);
 ```
 

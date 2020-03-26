@@ -89,14 +89,14 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 `GET` Пример запроса:
 
 ```sh
-https://api.crystalpay.ru/api.phps=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=withdraw&wallet=79999999999999&amount=100&service=qw&secret=%СЕКРЕТНЫЙ_КЛЮЧ%
+https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=withdraw&wallet=79999999999999&amount=100&service=qw&secret=%СЕКРЕТНЫЙ_КЛЮЧ%
 ```
 
 `JSON` Ответ:
 ```json
 {"error":false,"auth":"ok"}
 ```
-
+&nbsp;
 `PHP` Пример генерации секретного ключа для вывода:
 
 ```php

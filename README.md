@@ -67,11 +67,11 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 
 `JSON` Ответ:
 ```json
-{"state":"notpayed","error":false,"auth":"ok"}
+{"amount":"100","state":"notpayed","error":false,"auth":"ok"}
 ```
 #### ИЛИ
 ```json
-{"state":"payed","error":false,"auth":"ok"}
+{"amount":"100","state":"payed","error":false,"auth":"ok"}
 ```
 
 ## Вывод средств с кассы

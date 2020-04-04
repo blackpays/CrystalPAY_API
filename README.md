@@ -27,7 +27,7 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 
 `JSON` Ответ:
 ```json
-{"balance":"203","auth":"ok"}
+{"balance":{"YANDEX":52,"QIWI":100,"VISAMASTER.RUR":947},"auth":"ok"}
 ```
 
 ## Генерация ссылки для оплаты

@@ -38,8 +38,16 @@ https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=t
 |     n    | Имя/Логин кассы  |
 |     s    | Секретный ключ 1 |
 |  amount  | Сумма в рублях   |
+|  redirect  | Ссылка для перенаправления после оплаты (необязательно)   |
 
 `GET` Пример запроса:
+
+```sh
+https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=generate&amount=100&redirect=http%3A%2F%2Fgoogle.com
+```
+
+#### ИЛИ
+`GET` Пример запроса (без redirect):
 
 ```sh
 https://api.crystalpay.ru/api.php?s=0f5601d7150d663cc1dd05bbe035c0cb02b4bc8f&n=testkassa&o=generate&amount=100
